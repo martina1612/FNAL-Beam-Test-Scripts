@@ -11,11 +11,6 @@ Lxplus setting for root 6.04:
     source /afs/cern.ch/sw/lcg/external/gcc/4.8/x86_64-slc6/setup.sh
     source /afs/cern.ch/sw/lcg/app/releases/ROOT/6.04.02/x86_64-slc6-gcc48-opt/root/bin/thisroot.sh
 
-# How to Get This Software
-    git clone git@github.com:ram1123/FNAL-Beam-Test-Scripts.git		(if working  on lxplus)
-    git clone https://github.com/ram1123/FNAL-Beam-Test-Scripts.git	(if working on your pc or lpc)
-    cd FNAL-Beam-Test-Scripts
-	git checkout Develop
  
 ## How to Run:
 First you need to run the **TurboSoftware** to get the root file from EventBuilder step (root file should be of type CRC\*.root). Then there are two steps in the alignment framework. First step is to get the text file with hit information. Then, in next step takes this text file with hit info and tries to align the detector.
@@ -28,4 +23,4 @@ You may need to modify the path of input root files. Also, there are two variabl
 ### Step 2: Alignment part
 	./RunAiwuSoftware.sh <Initial Run Number>  <Final Run Number> No 1		# Will create text file with tracker info only
 	./RunAiwuSoftware.sh <Initial Run Number>  <Final Run Number> LC1 1		# Will create text file with tracker & one GE11
-	./RunAiwuSoftware.sh <Initial Run Number>  <Final Run Number> LC1 0		# Run the alignment code
+	./RunAiwuSoftware.sh <Initial Run Number>  <Final Run Number> No 0		# Run the alignment code
